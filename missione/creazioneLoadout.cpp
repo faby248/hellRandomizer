@@ -22,7 +22,12 @@ class creazioneLoadoutFinale
             else if(fazione == 1) { ptr = new automatonDifficile(); }
             else if(fazione == 2) { ptr = new terminidiAlieniDifficile(); }
 
-            for (int i = 0 ; i < giocatori; ++i) ptr->giveLoadout();
+            for (int i = 0 ; i < giocatori; ++i) 
+            {
+                cout << "Load out giocatore numero "  << (i + 1) << " : ";
+                ptr->giveLoadout();
+            }
+
             delete ptr;
         }
 };

@@ -15,10 +15,11 @@ using namespace std;
 
 int main ()
 {
-    /*
+    
     int sceltaFazione = 0;
     int difficolta = 0;
     int numeroGiocatori = 0;
+
     // fazione della missione
     while(sceltaFazione != 1 && sceltaFazione != 2)
     {
@@ -26,12 +27,16 @@ int main ()
         cin >> sceltaFazione;
     }
     cout << endl;
+
+    // difficoltà missione
     while(difficolta <= 0 || difficolta > 10)
     {
         cout << "Inserire difficolta missione compresa tra 1 e 10: ";
         cin >> difficolta;
     }
     cout << endl;
+
+    // numero giocatori
     while(numeroGiocatori <= 0 || numeroGiocatori > 4)
     {
         cout << "Inserire numero giocatori: ";
@@ -41,8 +46,6 @@ int main ()
     
     creazioneLoadoutFinale result;
     result.chiamaMetodo(sceltaFazione, difficolta, numeroGiocatori);
-    */
-   missioneSemplice oggettoProva;
-   oggettoProva.stampaLoadoutMissioneSemplice();
+
     return 0;
 }
