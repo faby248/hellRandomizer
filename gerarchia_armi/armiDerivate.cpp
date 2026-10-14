@@ -1,6 +1,7 @@
 #include <armi.cpp>
 using namespace std;
-// #1 LeggeraMedia, casi d'uso: tutto <= 5
+
+// #1 LeggeraMedia, difficoltà d'uso: tutto <= 5
 class leggeraMedia: virtual public arma
 {
     public:
@@ -13,7 +14,7 @@ class leggeraMedia: virtual public arma
 
 };
 
-// #2 PesanteSenzaZaino casi d'uso: tutto <= 5, terminidi > 5, alieni > 5
+// #2 PesanteSenzaZaino difficoltà d'uso: tutto <= 5, terminidi > 5, alieni > 5
 class pesanteSenzaZaino: virtual public arma
 {
     public:
@@ -24,7 +25,7 @@ class pesanteSenzaZaino: virtual public arma
         virtual string getClasse() const { return "pesanteSenzaZaino"; }
     };
 
-// #3 PesanteConZaino casi d'uso: tutto <= 5, terminidi > 5, alieni > 5
+// #3 PesanteConZaino difficoltà d'uso: tutto <= 5, terminidi > 5, alieni > 5
 class pesanteConZaino: virtual public arma
 {
     public:
@@ -35,7 +36,7 @@ class pesanteConZaino: virtual public arma
         virtual string getClasse() const { return "pesanteConZaino"; }
 };
 
-// #4 AnticarroConsumabile casi d'uso: tutto 
+// #4 AnticarroConsumabile difficoltà d'uso: tutto 
 class anticarroConsumabile: virtual public arma
 {
     public:
@@ -46,7 +47,7 @@ class anticarroConsumabile: virtual public arma
         virtual string getClasse() const { return "anticarroConsumabile"; }
 };
 
-// #5 AnticarroNormale casi d'uso: tutto > 5
+// #5 AnticarroNormale difficoltà d'uso: tutto > 5
 class anticarroNormale: virtual public arma
 {
     public:
@@ -57,7 +58,7 @@ class anticarroNormale: virtual public arma
         virtual string getClasse() const { return "anticarroNormale"; }
 };
 
-// #6 AnticarroConZaino casi d'uso: tutto > 5
+// #6 AnticarroConZaino difficoltà d'uso: tutto > 5
 class anticarroConZaino: virtual public arma
 {
     public:
@@ -68,7 +69,7 @@ class anticarroConZaino: virtual public arma
         virtual string getClasse() const { return "anticarroConZaino"; }
 };
 
-// #7 Incendiario casi d'uso: tutto <= 5, terminidi > 5, alieni > 5
+// #7 Incendiario difficoltà d'uso: tutto <= 5, terminidi > 5, alieni > 5
 class incendiario: virtual public arma
 {
     public:
@@ -79,7 +80,7 @@ class incendiario: virtual public arma
         virtual string getClasse() const { return "incendiario"; }
 };
 
-// #8 ZainoSalto casi d'uso: tutto <= 5, , terminidi > 5, alieni > 5
+// #8 ZainoSalto difficoltà d'uso: tutto <= 5, , terminidi > 5, alieni > 5
 class zainoSalto: virtual public arma
 {
     public:
@@ -90,7 +91,7 @@ class zainoSalto: virtual public arma
         virtual string getClasse() const { return "zainoSalto"; }
 };
 
-// #9 ZainoSupport casi d'uso: tutto 
+// #9 ZainoSupport difficoltà d'uso: tutto 
 class zainoSupport: virtual public arma
 {
     public:
@@ -101,7 +102,7 @@ class zainoSupport: virtual public arma
         virtual string getClasse() const { return "zainoSupport"; }
 };
 
-// #10 ZainoSpara casi d'uso: tutto <= 5, terminidi > 5, alieni > 5
+// #10 ZainoSpara difficoltà d'uso: tutto <= 5, terminidi > 5, alieni > 5
 class zainoSpara: virtual public arma
 {
     public:
@@ -112,7 +113,7 @@ class zainoSpara: virtual public arma
         virtual string getClasse() const { return "zainoSpara"; }
 };
 
-// #11 ZainoScudo casi d'uso: tutto 
+// #11 ZainoScudo difficoltà d'uso: tutto 
 class zainoScudo: virtual public arma
 {
     public:
@@ -123,7 +124,7 @@ class zainoScudo: virtual public arma
         virtual string getClasse() const { return "zainoScudo"; }
 };
 
-// #12 Veicolo casi d'uso: tutto 
+// #12 Veicolo difficoltà d'uso: tutto 
 class veicolo: virtual public arma
 {
     public:
@@ -134,7 +135,7 @@ class veicolo: virtual public arma
         virtual string getClasse() const { return "veicolo"; }
 };
 
-// #13 TorretteLeggereMedie casi d'uso: tutto <= 5, terminidi > 5, alieni > 5
+// #13 TorretteLeggereMedie difficoltà d'uso: tutto <= 5, terminidi > 5, alieni > 5
 class torrettaLeggeraMedia: virtual public arma
 {
     public:
@@ -145,7 +146,7 @@ class torrettaLeggeraMedia: virtual public arma
         virtual string getClasse() const { return "torrettaLeggeraMedia"; }
 };
 
-// #14 Fortificazione casi d'uso: tutto <= 5, bot > 5
+// #14 Fortificazione difficoltà d'uso: tutto <= 5, bot > 5
 class fortificazione: virtual public arma
 {
     public:
@@ -156,7 +157,7 @@ class fortificazione: virtual public arma
         virtual string getClasse() const { return "fortificazione"; }
 };
 
-// #15 TorretteAnticarro: tutto > 5
+// #15 TorretteAnticarro: difficoltà tutto > 5
 class torrettaAnticarro: virtual public arma
 {
     public:
@@ -167,7 +168,7 @@ class torrettaAnticarro: virtual public arma
         virtual string getClasse() const { return "torrettaAnticarro"; }
 };
 
-// #16 TorretteSupport casi d'uso: tutto <= 5
+// #16 TorretteSupport difficoltà d'uso: tutto <= 5
 class torrettaSupport: virtual public arma
 {
     public:
@@ -178,7 +179,7 @@ class torrettaSupport: virtual public arma
         virtual string getClasse() const { return "torrettaSupport"; }
 };
 
-// #17 TorrettaIncendiaria casi d'uso: tutto <= 5, terminidi > 5, alieni > 5
+// #17 TorrettaIncendiaria difficoltà d'uso: tutto <= 5, terminidi > 5, alieni > 5
 class torrettaIncendiaria: virtual public arma
 {
     public:
@@ -189,7 +190,7 @@ class torrettaIncendiaria: virtual public arma
         virtual string getClasse() const { return "torrettaIncendiaria"; }
 };
 
-// #18 Orbitale casi d'uso: tutto
+// #18 Orbitale difficoltà d'uso: tutto
 class orbitale: virtual public arma
 {
     public:
@@ -200,7 +201,7 @@ class orbitale: virtual public arma
         virtual string getClasse() const { return "orbitale"; }
 };
 
-// #19 Eagle casi d'uso: tutto
+// #19 Eagle difficoltà d'uso: tutto
 class eagle: virtual public arma
 {
     public:
