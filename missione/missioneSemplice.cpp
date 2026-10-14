@@ -26,7 +26,7 @@ class missioneSemplice: public missione
         
         virtual void giveLoadout() const
         {
-
+            cout << "| " ;
             for (int i = 0; i < 4; ++i)
             {
                 // random_device rd;

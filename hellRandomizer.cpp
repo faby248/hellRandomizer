@@ -26,7 +26,7 @@ int main ()
         cout << "Inserire difficolta missione compresa tra 1 e 10: ";
         cin >> difficolta;
     }
-    cout << endl;
+    // cout << endl;
 
     // se la difficoltà è <= 5, non ha senso chiedere la fazione
     if (difficolta > 5) {
@@ -36,15 +36,15 @@ int main ()
             cout << "Inserire fazione della missione: - 1 = automaton; - 2 = Terminidi / Alieni" << endl;
             cin >> sceltaFazione;
         }
-        cout << endl;
+        // cout << endl;
     }
     // numero giocatori
     while(numeroGiocatori <= 0 || numeroGiocatori > 4)
     {
         cout << "Inserire numero giocatori: ";
-        cin >> difficolta;
+        cin >> numeroGiocatori;
     }
-    cout << endl;
+    // cout << endl;
     
     creazioneLoadoutFinale result;
     result.chiamaMetodo(sceltaFazione, difficolta, numeroGiocatori);
