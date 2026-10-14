@@ -1,8 +1,7 @@
 #ifndef CREAZIONE_LOADOUT_CPP
 #define CREAZIONE_LOADOUT_CPP
 
-#include "../inventario/arma.cpp"
-#include "missione.cpp"
+#include "loadout.cpp"
 #include "automatonDifficile.cpp"
 #include "terminidiAlieniDifficile.cpp"
 #include "missioneSemplice.cpp"
@@ -15,7 +14,7 @@ using namespace std;
 class creazioneLoadoutFinale
 {
     public:
-        missione* ptr;
+        loadout* ptr;
         void chiamaMetodo(int fazione, int difficolta, int giocatori)
         {
             if (difficolta <= 5)  { ptr = new missioneSemplice(); }

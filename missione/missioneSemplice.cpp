@@ -2,27 +2,17 @@
 #define MISSIONE_SEMPLICE_CPP
 
 #include "../inventario/arma.cpp"
-#include "../inventario/armiDerivate.cpp"
 #include "../inventario/initializer.cpp"
-#include "missione.cpp"
+#include "loadout.cpp"
 
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
 
-class missioneSemplice: public missione
+class missioneSemplice: public loadout
 {
     public:
-        vector<vector<arma*>> loadoutMissioneSemplice;
-        initializer* ptri;
-        
-        // costruttore, l'inizializzazione del loadout vienelasciato alla classe initializer
-        missioneSemplice()
-        {            
-            ptri = new initializer();
-            ptri->inizializzatoreMissioneSemplice(loadoutMissioneSemplice);       
-        }
         
         virtual void giveLoadout() const
         {
@@ -36,18 +26,6 @@ class missioneSemplice: public missione
             cout << endl;
         }
         
-        void stampaLoadoutMissioneSemplice()
-        {
-            for(auto firstElement : loadoutMissioneSemplice)
-            {
-                for(auto secondElement : firstElement)
-                {
-                    cout << secondElement->nome << " | ";
-                }
-
-                cout << endl;
-            }
-        }
 };
 
 #endif

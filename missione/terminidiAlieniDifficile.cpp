@@ -2,19 +2,16 @@
 #define TERMINIDI_ALIENI_DIFFICILI_CPP
 
 #include "../inventario/arma.cpp"
-#include "../inventario/armiDerivate.cpp"
 #include "../inventario/initializer.cpp"
-#include "missione.cpp"
+#include "loadout.cpp"
 
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
-class terminidiAlieniDifficile: public missione
+class terminidiAlieniDifficile: public loadout
 {
     public:
-        vector<arma*> loadoutTerminidiAlieniDifficile;
-        terminidiAlieniDifficile() {}
         virtual void giveLoadout() const
         {
             cout << "| " ;
