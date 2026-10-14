@@ -9,6 +9,7 @@
 
 using namespace std;
 
+// enum per indicare quale slot del loadout è occupato
 enum Slot : unsigned {
     NESSUNO        = 0,
     ARMA           = 1 << 0,
@@ -19,7 +20,7 @@ enum Slot : unsigned {
     ORBITALE       = 1 << 5,
     EAGLE          = 1 << 6
 };
-
+// classe categoria per istanziare ogni classe arma con caratteristiche: quale slot occupa, se è un'arma di supporto e la lista degli stratagemmi
 class categoria
 {   
     public:
@@ -27,7 +28,8 @@ class categoria
         bool supporto;
         vector<string> stratagemmi;
         categoria(unsigned s, bool sup, const vector<string>& strat): slot(s), supporto(sup), stratagemmi(move(strat)) {}
-
+        
+        // metodi giver
         unsigned getSlot() const { return slot; }
         bool isSupporto() const { return supporto; }
 

@@ -13,11 +13,14 @@ using namespace std;
 class loadout
 {
     public:
+        // puntatore per chiamare la classe di inizializzazione adeguata
         initializer* ptri;
         static mt19937 gen;
         loadout(): ptri(new initializer()) {}
+        // costruttore del load out, restituisce il loadout che viene poi stampato
         virtual vector<string> giveLoadout()
         {
+            // chiamata polimorfa del metodo "inizializzatore()"
             vector<categoria> disponibili = inizializzatore();
             vector<string> loadout;
             unsigned occupati = 0;

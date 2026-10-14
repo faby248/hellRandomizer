@@ -15,6 +15,8 @@ class creazioneLoadoutFinale
 {
     public:
         loadout* ptr;
+
+        // metodo per chiamare il metodo di costruttore del loadout, usa polimorfismo per il metodo "inizializzatore"
         void chiamaMetodo(int fazione, int difficolta, int giocatori)
         {
             if (difficolta <= 5)  { ptr = new missioneSemplice(); }

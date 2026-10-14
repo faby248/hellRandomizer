@@ -11,7 +11,7 @@ class initializer
     public:
         
         // < ---- INIZIALIZZATORI LISTE ---- >
-        // modificare qui quando si aggiunge un'arma al loadout
+        // modificare qui quando si aggiunge un'arma all'inventario delle armi
         categoria listaLeggeraMedia           () { return categoria(ARMA, true, {"MG-43", "M-105", "GL-21", "S-11", "RL-77"}); }
         categoria listaPesanteSenzaZaino      () { return categoria(ARMA, true, {"CQC-20", "MG-206", "RS-422", "APW-1", "PLAS-45", "ARC-3"}); }
         categoria listaPesanteConZaino        () { return categoria(ARMA | ZAINO, true, {"AC-8", "GL-28"}); }
@@ -54,6 +54,7 @@ class initializer
             LoadoutMissioneSemplice.push_back(listaEagle());
             return LoadoutMissioneSemplice;
         }
+        // INIZIALIZZATORE AUTOMATON > 5
 
         vector<categoria> inizializzatoreAutomatonDifficile()
         {
@@ -70,6 +71,7 @@ class initializer
             LoadoutAutomatonDifficile.push_back(listaEagle());
             return LoadoutAutomatonDifficile;
         }
+        // INIZIALIZZATORE ALIENI / TERMINIDI > 5
 
         vector<categoria> inizializzatoreTermindiAlieniDifficile()
         {
