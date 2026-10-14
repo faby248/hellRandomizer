@@ -2,9 +2,9 @@
 #define AUTOMATON_DIFFICILE_CPP
 
 
-#include "inventario/arma.cpp"
-#include "inventario/armiDerivate.cpp"
-#include "inventario/initializer.cpp"
+#include "../inventario/arma.cpp"
+#include "../inventario/armiDerivate.cpp"
+#include "../inventario/initializer.cpp"
 #include "missione.cpp"
 
 #include <iostream>

@@ -1,9 +1,9 @@
 #ifndef MISSIONE_SEMPLICE_CPP
 #define MISSIONE_SEMPLICE_CPP
 
-#include "inventario/arma.cpp"
-#include "inventario/armiDerivate.cpp"
-#include "inventario/initializer.cpp"
+#include "../inventario/arma.cpp"
+#include "../inventario/armiDerivate.cpp"
+#include "../inventario/initializer.cpp"
 #include "missione.cpp"
 
 #include <iostream>

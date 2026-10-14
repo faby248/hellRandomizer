@@ -1,7 +1,7 @@
 #ifndef CREAZIONE_LOADOUT_CPP
 #define CREAZIONE_LOADOUT_CPP
 
-#include "inventario/arma.cpp"
+#include "../inventario/arma.cpp"
 #include "missione.cpp"
 #include "automatonDifficile.cpp"
 #include "terminidiAlieniDifficile.cpp"
