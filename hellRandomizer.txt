@@ -3,5 +3,18 @@ Obiettivo: randomizzare loadout di Helldivers 2.
 Ragionamento: manteniamo una certa coerenza.
 1 - il loadout cambia in base a un certo range della difficoltà: <= 5 accettate tutte le armi, > 5 solo armi che hanno anticarro o speciali.
 2 - non posso avere 4 elementi dello stesso tipo, una volta selezionato un elemento, nelle celle successive viene escluso dalla selezione.
-3 - armi con backpack escludono la selezione di backpack.
+3 - mutua esclusione:
+    - la scelta di un orbitale esclude automaticamente tutti gli orbitali;
+    - la scelta di una eagle esclude automaticamente tutte le altre eagle;
+    - la scelta di una torretta di qualsiasi tipo esclude automaticamente tutte le altre torrette di qualsiasi tipo;
+    - la scelta di una fortificazione esclude automaticamente tutte le altre fortificazioni;
+    - la scelta di un veicolo esclude automaticamente tutti gli altri veicoli;
+    - la scelta di un'arma leggeraMedia esclude automaticamente le armi: pesanteSenzaZaino, pesanteConZaino, anticarroNormale, anticarroConZaino, incendiario, e ammette la scelta di 1: anticarroConsumabile;
+    - la scelta di un'arma pesanteSenzaZaino esclude automaticamente le armi: leggeraMedia, pesanteConZaino, anticarroNormale, anticarroConZaino, incendiario, e ammette la scelta di 1: anticarroConsumabile;
+    - la scelta di un'arma pesanteConZaino esclude automaticamente le armi: leggeraMedia, pesanteSenzaZaino, anticarroNormale, anticarroConZaino, incendiario, e ammette la scelta di 1: anticarroConsumabile, ed esclude la scelta di tutti i tipi di zaini;
+    - la scelta di un'arma anticarroConsumabile non esclude automaticamente le armi precedenti ed ammette la scelta di un secondo anticarroConsumabile; 
+    - la scelta di un'arma anticarroNormale esclude automaticamente le armi: leggeraMedia, pesanteSenzaZaino, pesanteConZaino, anticarroConZaino, incendiario, e ammette la scelta di 1: anticarroConsumabile;
+    - la scelta di un'arma anticarroConZaino esclude automaticamente le armi: leggeraMedia, pesanteSenzaZaino, pesanteConZaino, anticarroNormale, incendiario, e ammette la scelta di 1: anticarroConsumabile, ed esclude la scelta di tutti i tipi di zaini;
+    - la scelta di un'arma incendiario esclude automaticamente le armi: leggeraMedia, pesanteSenzaZaino, pesanteConZaino, anticarroNormale, anticarroConZaino, e ammette la scelta di 1: anticarroConsumabile;
+    - la scelta di uno zaino di qualsiasi tipo esclude automaticamente tutti gli zaini di qualsiasi tipo e le armi: anticarroConZaino, pesanteConZaino;
 4 - veicoli limitati a 1.

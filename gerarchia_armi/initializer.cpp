@@ -66,7 +66,7 @@ class initializer
 class missioneSemplice: public arma
 {
     public:
-        vector<vector<string>> loadoutMissioneSemplice;
+        vector<vector<arma*>> loadoutMissioneSemplice;
         initializer* ptri;
         missioneSemplice()
         {

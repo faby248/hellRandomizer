@@ -12,6 +12,8 @@ using namespace std;
 class arma
 {
     public:
+        string nome;
+        arma(const string& att): nome(att) {}
         virtual ~arma () = 0;        
         virtual void giveLoadout() const {/* metodo che viene implementato dalle derivate in base al tipo di missione */}
         virtual string getNome() const {}
