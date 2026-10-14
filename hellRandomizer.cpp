@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-// #include "inventario/initializer.cpp"
-#include "missione/missioneSemplice.cpp"
+#include "missione/creazioneLoadout.cpp"
+
 /*
 Obiettivo: randomizzare loadout di Helldivers 2.
 

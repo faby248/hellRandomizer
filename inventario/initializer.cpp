@@ -1,3 +1,7 @@
+#ifndef INITIALIZER_CPP
+#define INITIALIZER_CPP
+
+
 #include "armiDerivate.cpp"
 using namespace std;
 class initializer
@@ -80,3 +84,5 @@ class initializer
             popolaLoadoutMissioneSemplice.push_back(listaEagle);
         }
 };
+
+#endif

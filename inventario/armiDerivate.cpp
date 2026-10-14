@@ -1,4 +1,7 @@
-#include "armi.cpp"
+#ifndef ARMI_DERIVATE_CPP
+#define ARMI_DERIVATE_CPP
+
+#include "arma.cpp"
 using namespace std;
 // #1 LeggeraMedia, difficoltà d'uso: tutto <= 5
 class leggeraMedia: virtual public arma
@@ -191,3 +194,5 @@ class eagle: virtual public arma
         virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "eagle"; }
 };
+
+#endif

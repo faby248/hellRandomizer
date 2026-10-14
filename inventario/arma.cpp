@@ -1,3 +1,6 @@
+#ifndef ARMI_CPP
+#define ARMI_CPP
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -15,9 +18,10 @@ class arma
         string nome;
         arma() = default;
         arma(const string& att): nome(att) {}
-        // virtual ~arma () = 0;        
-        virtual void giveLoadout() const {/* metodo che viene implementato dalle derivate in base al tipo di missione */}
+        virtual ~arma () = default;
         virtual string getNome() const { return nome;}
         virtual string getClasse() const { return "arma";}
         virtual void rimuoviClasseArma(vector<vector<arma*>>& loadout) { }
 };
+
+#endif
