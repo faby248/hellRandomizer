@@ -21,8 +21,7 @@ class missioneSemplice: public missione
         missioneSemplice()
         {            
             ptri = new initializer();
-            ptri->metodiMissioneSemplice(loadoutMissioneSemplice);
-            
+            ptri->inizializzatoreMissioneSemplice(loadoutMissioneSemplice);       
         }
         
         virtual void giveLoadout() const

@@ -9,7 +9,6 @@ class leggeraMedia: virtual public arma
     public:
         leggeraMedia() = default;
         leggeraMedia(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "leggeraMedia"; }
 
 
@@ -21,7 +20,6 @@ class pesanteSenzaZaino: virtual public arma
     public:
         pesanteSenzaZaino() = default;
         pesanteSenzaZaino(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "pesanteSenzaZaino"; }
     };
 
@@ -31,7 +29,6 @@ class pesanteConZaino: virtual public arma
     public:
         pesanteConZaino() = default;
         pesanteConZaino(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "pesanteConZaino"; }
 };
 
@@ -41,7 +38,6 @@ class anticarroConsumabile: virtual public arma
     public:
         anticarroConsumabile() =default;
         anticarroConsumabile(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "anticarroConsumabile"; }
 };
 
@@ -51,7 +47,6 @@ class anticarroNormale: virtual public arma
     public:
         anticarroNormale() = default;
         anticarroNormale(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "anticarroNormale"; }
 };
 
@@ -61,7 +56,6 @@ class anticarroConZaino: virtual public arma
     public:
         anticarroConZaino() = default;
         anticarroConZaino(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "anticarroConZaino"; }
 };
 
@@ -71,7 +65,6 @@ class incendiario: virtual public arma
     public:
         incendiario() = default;
         incendiario(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "incendiario"; }
 };
 
@@ -81,7 +74,6 @@ class zainoSalto: virtual public arma
     public:
         zainoSalto() = default;
         zainoSalto(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "zainoSalto"; }
 };
 
@@ -91,7 +83,6 @@ class zainoSupport: virtual public arma
     public:
         zainoSupport() = default;
         zainoSupport(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "zainoSupport"; }
 };
 
@@ -101,7 +92,6 @@ class zainoSpara: virtual public arma
     public:
         zainoSpara() = default;
         zainoSpara(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "zainoSpara"; }
 };
 
@@ -111,7 +101,6 @@ class zainoScudo: virtual public arma
     public:
         zainoScudo() = default;
         zainoScudo(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "zainoScudo"; }
 };
 
@@ -121,7 +110,6 @@ class veicolo: virtual public arma
     public:
         veicolo() = default;
         veicolo(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "veicolo"; }
 };
 
@@ -131,7 +119,6 @@ class torrettaLeggeraMedia: virtual public arma
     public:
         torrettaLeggeraMedia() = default;
         torrettaLeggeraMedia(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "torrettaLeggeraMedia"; }
 };
 
@@ -141,7 +128,6 @@ class fortificazione: virtual public arma
     public:
         fortificazione() = default;
         fortificazione(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "fortificazione"; }
 };
 
@@ -151,7 +137,6 @@ class torrettaAnticarro: virtual public arma
     public:
         torrettaAnticarro() = default;
         torrettaAnticarro(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "torrettaAnticarro"; }
 };
 
@@ -161,7 +146,6 @@ class torrettaSupport: virtual public arma
     public:
         torrettaSupport() = default;
         torrettaSupport(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "torrettaSupport"; }
 };
 
@@ -171,7 +155,6 @@ class torrettaIncendiaria: virtual public arma
     public:
         torrettaIncendiaria() = default;
         torrettaIncendiaria(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "torrettaIncendiaria"; }
 };
 
@@ -181,7 +164,6 @@ class orbitale: virtual public arma
     public:
         orbitale() = default;
         orbitale(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "orbitale"; }
 };
 
@@ -191,7 +173,6 @@ class eagle: virtual public arma
     public:
         eagle() = default;
         eagle(const string& att): arma(att) {}
-        virtual string getNome() const override { return nome; }
         virtual string getClasse() const { return "eagle"; }
 };
 

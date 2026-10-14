@@ -14,8 +14,7 @@ using namespace std;
 class missione
 {
     public:
-        virtual void giveLoadout() const 
-        {}
+        virtual void giveLoadout() const {}
 };
 
 #endif

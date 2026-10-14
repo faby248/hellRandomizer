@@ -7,6 +7,8 @@ using namespace std;
 class initializer
 {
     public:
+        // < ---- LISTE DI STRATAGEMMI ---- >
+        // queste liste seguono il numero e i nomi delle classi
         vector<arma*>           listaLeggeraMedia;
         vector<arma*>      listaPesanteSenzaZaino;
         vector<arma*>        listaPesanteConZaino;
@@ -27,6 +29,8 @@ class initializer
         vector<arma*>               listaOrbitale;
         vector<arma*>                  listaEagle;
  
+        // < ---- INIZIALIZZATORI LISTE ---- >
+        // modificare qui quando si aggiunge un'arma al loadout
         void initializerListaLeggeraMedia           () { for(auto nomeArma : {"MG-43", "M-105", "GL-21", "S-11", "RL-77"} )listaLeggeraMedia.push_back(new leggeraMedia(nomeArma)); }
         void initializerListaPesanteSenzaZaino      () { for(auto nomeArma : {"CQC-20", "MG-206", "RS-422", "APW-1", "PLAS-45", "ARC-3"} ) listaPesanteSenzaZaino.push_back(new pesanteSenzaZaino(nomeArma)); }
         void initializerListaPesanteConZaino        () { for(auto nomeArma : {"AC-8", "GL-28"} ) listaPesanteConZaino.push_back(new pesanteConZaino(nomeArma)); }
@@ -47,7 +51,8 @@ class initializer
         void initializerListaOrbitale               () { for(auto nomeArma : {"orbitale di precisione", "orbitale gatling", "orbitale gas", "orbitale 120mm", "orbitale esplosivo aereo", "orbitale fumo", "orbitale elettrico", "orbitale 380mm", "orbitale mobile", "orbitale laser", "orbitale napalm", "orbitale railcannon"} ) listaOrbitale.push_back(new orbitale(nomeArma)); }
         void initializerListaEagle                  () { for(auto nomeArma : {"eagle strafing", "eagle random airstrike", "eagle grappolo", "eagle fumogeno", "eagle napalm", "eagle precisone 110mm", "eagle 500kg"} ) listaEagle.push_back(new eagle(nomeArma)); }
 
-        void metodiMissioneSemplice(vector<vector<arma*>>& popolaLoadoutMissioneSemplice)
+        // INIZIALIZZATORE MISSIONE SEMPLICE
+        void inizializzatoreMissioneSemplice(vector<vector<arma*>>& popolaLoadoutMissioneSemplice)
         {
             initializerListaLeggeraMedia           ();
             initializerListaPesanteSenzaZaino      ();
@@ -83,6 +88,68 @@ class initializer
             popolaLoadoutMissioneSemplice.push_back(listaOrbitale);
             popolaLoadoutMissioneSemplice.push_back(listaEagle);
         }
-};
+
+        void inizializzatoreAutomatonDifficile(vector<vector<arma*>>& popolaLoadoutAutomatonDifficile)
+        {
+            initializerListaAnticarroConsumabile   ();
+            initializerListaAnticarroNormale       ();
+            initializerListaAnticarroConZaino      ();
+            initializerListaZainoSupport           ();
+            initializerListaZainoScudo             ();
+            initializerListaVeicolo                ();
+            initializerListaFortificazione         ();
+            initializerListaTorrettaAnticarro      ();
+            initializerListaOrbitale               ();
+            initializerListaEagle                  ();
+
+            popolaLoadoutAutomatonDifficile.push_back(listaAnticarroConsumabile);
+            popolaLoadoutAutomatonDifficile.push_back(listaAnticarroNormale);
+            popolaLoadoutAutomatonDifficile.push_back(listaAnticarroConZaino);
+            popolaLoadoutAutomatonDifficile.push_back(listaZainoSupport);
+            popolaLoadoutAutomatonDifficile.push_back(listaZainoScudo);
+            popolaLoadoutAutomatonDifficile.push_back(listaVeicolo);
+            popolaLoadoutAutomatonDifficile.push_back(listaFortificazione);
+            popolaLoadoutAutomatonDifficile.push_back(listaTorrettaAnticarro);
+            popolaLoadoutAutomatonDifficile.push_back(listaOrbitale);
+            popolaLoadoutAutomatonDifficile.push_back(listaEagle);
+        }
+
+        void inizializzatoreTermindiAlieniDifficile(vector<vector<arma*>>& popolaLoadoutTermindiAlieniDifficile)
+        {
+            initializerListaPesanteSenzaZaino      ();
+            initializerListaPesanteConZaino        ();
+            initializerListaAnticarroConsumabile   ();
+            initializerListaAnticarroNormale       ();
+            initializerListaAnticarroConZaino      ();
+            initializerListaIncendiario            ();
+            initializerListaZainoSalto             ();
+            initializerListaZainoSupport           ();
+            initializerListaZainoSpara             ();
+            initializerListaZainoScudo             ();
+            initializerListaVeicolo                ();
+            initializerListaTorrettaLeggeraMedia   ();
+            initializerListaTorrettaAnticarro      ();
+            initializerListaTorrettaIncendiaria    ();
+            initializerListaOrbitale               ();
+            initializerListaEagle                  ();
+
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaPesanteSenzaZaino);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaPesanteConZaino);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaAnticarroConsumabile);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaAnticarroNormale);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaAnticarroConZaino);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaIncendiario);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaZainoSalto);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaZainoSupport);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaZainoSpara);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaZainoScudo);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaVeicolo);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaTorrettaLeggeraMedia);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaTorrettaAnticarro);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaTorrettaIncendiaria);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaOrbitale);
+            popolaLoadoutTermindiAlieniDifficile.push_back(listaEagle);
+        }
+    };
 
 #endif

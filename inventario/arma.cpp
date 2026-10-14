@@ -21,6 +21,9 @@ class arma
         virtual ~arma () = default;
         virtual string getNome() const { return nome;}
         virtual string getClasse() const { return "arma";}
+
+
+        
         virtual void rimuoviClasseArma(vector<vector<arma*>>& loadout) { }
 };
 
