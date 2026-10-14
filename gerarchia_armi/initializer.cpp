@@ -1,5 +1,5 @@
 // #include "armi.cpp"
-#include <armiDerivate.cpp>
+#include "armiDerivate.cpp"
 // #include "vector" 
 using namespace std;
 
@@ -123,15 +123,22 @@ class missioneSemplice: public arma
                 int indexArma = dis_IndexArma(gen);
 
                 cout << "Arma " << i + 1 <<": [ " << copia[indexTipoArma][indexArma]->getNome() << " ] " << endl;
-
-
-            }
-
-            
-
-            
+            }            
         }
-    };
+
+        void stampaLoadoutMissioneSemplice()
+        {
+            for(auto firstElement : loadoutMissioneSemplice)
+            {
+                for(auto secondElement : firstElement)
+                {
+                    cout << secondElement->nome << " ";
+                }
+
+                cout << endl;
+            }
+        }
+};
 
 class terminidiAlieniDifficile: public arma {
     public:
