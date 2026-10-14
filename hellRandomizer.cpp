@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <gerarchia_armi/armi.cpp>
+#include <gerarchia_armi/initializer.cpp>
 /*
 Obiettivo: randomizzare loadout di Helldivers 2.
 

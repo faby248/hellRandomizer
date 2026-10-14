@@ -1,4 +1,4 @@
-#include "armi.cpp"
+#include <armi.cpp>
 using namespace std;
 // #1 LeggeraMedia, casi d'uso: tutto <= 5
 class leggeraMedia: virtual public arma
