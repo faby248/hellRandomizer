@@ -13,7 +13,7 @@ using namespace std;
 class loadout
 {
     public:
-        virtual void giveLoadout() const {}
+        virtual vector<string> giveLoadout() const {}
 };
 
 #endif

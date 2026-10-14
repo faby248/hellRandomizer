@@ -23,11 +23,28 @@ class categoria
 {   
     public:
         unsigned slot;
-        bool support;
+        bool supporto;
         vector<string> stratagemmi;
-        categoria(unsigned s, bool sup, const vector<string>& strat): slot(s), support(sup), stratagemmi(move(strat)) {}
+        categoria(unsigned s, bool sup, const vector<string>& strat): slot(s), supporto(sup), stratagemmi(move(strat)) {}
 
-        // non mi interessano i metodi di get
+        unsigned getSlot() const { return slot; }
+        bool isSupporto() const { return supporto; }
+    
+        // Sorteggia un nome e lo toglie da questa categoria (precondizione: non vuota)
+        string estrai(mt19937& gen) {
+            size_t a = uniform_int_distribution<size_t>(0, stratagemmi.size() - 1)(gen);
+            string scelto = stratagemmi[a];
+            stratagemmi.erase(stratagemmi.begin() + a);
+            return scelto;
+        }
+    
+        // La categoria non è più selezionabile dato lo stato attuale del loadout?
+        bool inConflitto(unsigned occupati, int nSupporto) const {
+            return stratagemmi.empty()
+                || (slot & occupati)
+                || (nSupporto >= 2 && supporto);
+        }
+        
 };
 
 #endif
