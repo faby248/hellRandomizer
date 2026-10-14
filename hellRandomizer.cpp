@@ -20,14 +20,6 @@ int main ()
     int difficolta = 0;
     int numeroGiocatori = 0;
 
-    // fazione della missione
-    while(sceltaFazione != 1 && sceltaFazione != 2)
-    {
-        cout << "Inserire fazione della missione: - 1 = automaton; - 2 = Terminidi / Alieni" << endl;
-        cin >> sceltaFazione;
-    }
-    cout << endl;
-
     // difficoltà missione
     while(difficolta <= 0 || difficolta > 10)
     {
@@ -36,6 +28,16 @@ int main ()
     }
     cout << endl;
 
+    // se la difficoltà è <= 5, non ha senso chiedere la fazione
+    if (difficolta > 5) {
+        // fazione della missione
+        while(sceltaFazione != 1 && sceltaFazione != 2)
+        {
+            cout << "Inserire fazione della missione: - 1 = automaton; - 2 = Terminidi / Alieni" << endl;
+            cin >> sceltaFazione;
+        }
+        cout << endl;
+    }
     // numero giocatori
     while(numeroGiocatori <= 0 || numeroGiocatori > 4)
     {
