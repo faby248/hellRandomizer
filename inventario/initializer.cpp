@@ -33,8 +33,9 @@ class initializer
         categoria listaEagle                  () { return categoria(EAGLE, false, {"eagle strafing", "eagle random airstrike", "eagle grappolo", "eagle fumogeno", "eagle napalm", "eagle precisone 110mm", "eagle 500kg"}); }
 
         // INIZIALIZZATORE MISSIONE SEMPLICE
-        void inizializzatoreMissioneSemplice(vector<categoria>& LoadoutMissioneSemplice)
+        vector<categoria> inizializzatoreMissioneSemplice()
         {
+            vector<categoria> LoadoutMissioneSemplice;
             LoadoutMissioneSemplice.push_back(listaLeggeraMedia());
             LoadoutMissioneSemplice.push_back(listaPesanteSenzaZaino());
             LoadoutMissioneSemplice.push_back(listaPesanteConZaino());
@@ -51,10 +52,12 @@ class initializer
             LoadoutMissioneSemplice.push_back(listaTorrettaIncendiaria());
             LoadoutMissioneSemplice.push_back(listaOrbitale());
             LoadoutMissioneSemplice.push_back(listaEagle());
+            return LoadoutMissioneSemplice;
         }
 
-        void inizializzatoreAutomatonDifficile(vector<categoria>& LoadoutAutomatonDifficile)
+        vector<categoria> inizializzatoreAutomatonDifficile()
         {
+            vector<categoria> LoadoutAutomatonDifficile;
             LoadoutAutomatonDifficile.push_back(listaAnticarroConsumabile());   
             LoadoutAutomatonDifficile.push_back(listaAnticarroNormale());   
             LoadoutAutomatonDifficile.push_back(listaAnticarroConZaino());   
@@ -64,11 +67,13 @@ class initializer
             LoadoutAutomatonDifficile.push_back(listaFortificazione());   
             LoadoutAutomatonDifficile.push_back(listaTorrettaAnticarro());   
             LoadoutAutomatonDifficile.push_back(listaOrbitale());   
-            LoadoutAutomatonDifficile.push_back(listaEagle());   
+            LoadoutAutomatonDifficile.push_back(listaEagle());
+            return LoadoutAutomatonDifficile;
         }
 
-        void inizializzatoreTermindiAlieniDifficile(vector<categoria>& LoadoutTermindiAlieniDifficile)
+        vector<categoria> inizializzatoreTermindiAlieniDifficile()
         {
+            vector<categoria> LoadoutTermindiAlieniDifficile;
             LoadoutTermindiAlieniDifficile.push_back(listaPesanteSenzaZaino());
             LoadoutTermindiAlieniDifficile.push_back(listaPesanteConZaino());
             LoadoutTermindiAlieniDifficile.push_back(listaAnticarroConsumabile());
@@ -85,7 +90,7 @@ class initializer
             LoadoutTermindiAlieniDifficile.push_back(listaTorrettaIncendiaria());
             LoadoutTermindiAlieniDifficile.push_back(listaOrbitale());
             LoadoutTermindiAlieniDifficile.push_back(listaEagle());
-
+            return LoadoutTermindiAlieniDifficile;
         }
     };
 
