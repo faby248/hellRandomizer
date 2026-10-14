@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include "gerarchia_armi/initializer.cpp"
+// #include "inventario/initializer.cpp"
+#include "missione/missioneSemplice.cpp"
 /*
 Obiettivo: randomizzare loadout di Helldivers 2.
 
@@ -37,12 +38,11 @@ int main ()
         cin >> difficolta;
     }
     cout << endl;
-
+    
     creazioneLoadoutFinale result;
     result.chiamaMetodo(sceltaFazione, difficolta, numeroGiocatori);
     */
-
-    missioneSemplice oggettoProva;
-    oggettoProva.stampaLoadoutMissioneSemplice();
+   missioneSemplice oggettoProva;
+   oggettoProva.stampaLoadoutMissioneSemplice();
     return 0;
 }
