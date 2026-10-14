@@ -27,6 +27,7 @@ class creazioneLoadoutFinale
                 cout << "Load out giocatore numero "  << (i + 1) << " : ";
                 result = ptr->giveLoadout();
                 for(int i = 0; i < result.size(); ++i) {cout << result[i] << " | "; }
+                cout << endl;
             }
 
             delete ptr;

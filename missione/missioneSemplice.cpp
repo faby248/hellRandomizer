@@ -8,17 +8,17 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 using namespace std;
 
 class missioneSemplice: public loadout
 {
     public:
-        initializer* ptri;
+
         virtual vector<string> giveLoadout() const
         {
             vector<categoria> disponibili;
             ptri->inizializzatoreMissioneSemplice(disponibili);
-            mt19937 gen;
             vector<string> loadout;
             unsigned occupati = 0;
             int nSupporto = 0;

@@ -9,7 +9,7 @@ using namespace std;
 class initializer
 {
     public:
- 
+        
         // < ---- INIZIALIZZATORI LISTE ---- >
         // modificare qui quando si aggiunge un'arma al loadout
         categoria listaLeggeraMedia           () { return categoria(ARMA, true, {"MG-43", "M-105", "GL-21", "S-11", "RL-77"}); }
@@ -53,70 +53,39 @@ class initializer
             LoadoutMissioneSemplice.push_back(listaEagle());
         }
 
-        void inizializzatoreAutomatonDifficile()
+        void inizializzatoreAutomatonDifficile(vector<categoria>& LoadoutAutomatonDifficile)
         {
-            /*
-            initializerListaAnticarroConsumabile   ();
-            initializerListaAnticarroNormale       ();
-            initializerListaAnticarroConZaino      ();
-            initializerListaZainoSupport           ();
-            initializerListaZainoScudo             ();
-            initializerListaVeicolo                ();
-            initializerListaFortificazione         ();
-            initializerListaTorrettaAnticarro      ();
-            initializerListaOrbitale               ();
-            initializerListaEagle                  ();
-
-            popolaLoadoutAutomatonDifficile.push_back(listaAnticarroConsumabile);
-            popolaLoadoutAutomatonDifficile.push_back(listaAnticarroNormale);
-            popolaLoadoutAutomatonDifficile.push_back(listaAnticarroConZaino);
-            popolaLoadoutAutomatonDifficile.push_back(listaZainoSupport);
-            popolaLoadoutAutomatonDifficile.push_back(listaZainoScudo);
-            popolaLoadoutAutomatonDifficile.push_back(listaVeicolo);
-            popolaLoadoutAutomatonDifficile.push_back(listaFortificazione);
-            popolaLoadoutAutomatonDifficile.push_back(listaTorrettaAnticarro);
-            popolaLoadoutAutomatonDifficile.push_back(listaOrbitale);
-            popolaLoadoutAutomatonDifficile.push_back(listaEagle);
-            */
+            LoadoutAutomatonDifficile.push_back(listaAnticarroConsumabile());   
+            LoadoutAutomatonDifficile.push_back(listaAnticarroNormale());   
+            LoadoutAutomatonDifficile.push_back(listaAnticarroConZaino());   
+            LoadoutAutomatonDifficile.push_back(listaZainoSupport());   
+            LoadoutAutomatonDifficile.push_back(listaZainoScudo());   
+            LoadoutAutomatonDifficile.push_back(listaVeicolo());   
+            LoadoutAutomatonDifficile.push_back(listaFortificazione());   
+            LoadoutAutomatonDifficile.push_back(listaTorrettaAnticarro());   
+            LoadoutAutomatonDifficile.push_back(listaOrbitale());   
+            LoadoutAutomatonDifficile.push_back(listaEagle());   
         }
 
-        void inizializzatoreTermindiAlieniDifficile()
+        void inizializzatoreTermindiAlieniDifficile(vector<categoria>& LoadoutTermindiAlieniDifficile)
         {
-            /*
-            initializerListaPesanteSenzaZaino      ();
-            initializerListaPesanteConZaino        ();
-            initializerListaAnticarroConsumabile   ();
-            initializerListaAnticarroNormale       ();
-            initializerListaAnticarroConZaino      ();
-            initializerListaIncendiario            ();
-            initializerListaZainoSalto             ();
-            initializerListaZainoSupport           ();
-            initializerListaZainoSpara             ();
-            initializerListaZainoScudo             ();
-            initializerListaVeicolo                ();
-            initializerListaTorrettaLeggeraMedia   ();
-            initializerListaTorrettaAnticarro      ();
-            initializerListaTorrettaIncendiaria    ();
-            initializerListaOrbitale               ();
-            initializerListaEagle                  ();
+            LoadoutTermindiAlieniDifficile.push_back(listaPesanteSenzaZaino());
+            LoadoutTermindiAlieniDifficile.push_back(listaPesanteConZaino());
+            LoadoutTermindiAlieniDifficile.push_back(listaAnticarroConsumabile());
+            LoadoutTermindiAlieniDifficile.push_back(listaAnticarroNormale());
+            LoadoutTermindiAlieniDifficile.push_back(listaAnticarroConZaino());
+            LoadoutTermindiAlieniDifficile.push_back(listaIncendiario());
+            LoadoutTermindiAlieniDifficile.push_back(listaZainoSalto());
+            LoadoutTermindiAlieniDifficile.push_back(listaZainoSupport());
+            LoadoutTermindiAlieniDifficile.push_back(listaZainoSpara());
+            LoadoutTermindiAlieniDifficile.push_back(listaZainoScudo());
+            LoadoutTermindiAlieniDifficile.push_back(listaVeicolo());
+            LoadoutTermindiAlieniDifficile.push_back(listaTorrettaLeggeraMedia());
+            LoadoutTermindiAlieniDifficile.push_back(listaTorrettaAnticarro());
+            LoadoutTermindiAlieniDifficile.push_back(listaTorrettaIncendiaria());
+            LoadoutTermindiAlieniDifficile.push_back(listaOrbitale());
+            LoadoutTermindiAlieniDifficile.push_back(listaEagle());
 
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaPesanteSenzaZaino);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaPesanteConZaino);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaAnticarroConsumabile);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaAnticarroNormale);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaAnticarroConZaino);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaIncendiario);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaZainoSalto);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaZainoSupport);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaZainoSpara);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaZainoScudo);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaVeicolo);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaTorrettaLeggeraMedia);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaTorrettaAnticarro);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaTorrettaIncendiaria);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaOrbitale);
-            popolaLoadoutTermindiAlieniDifficile.push_back(listaEagle);
-            */
         }
     };
 
